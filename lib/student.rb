@@ -69,7 +69,7 @@ class Student
         end
     end
 
-    def self.first_X_students_in_grade_10
+    def self.first_student_in_grade_10
       sql = <<-SQL
         SELECT * FROM students
         WHERE grade = 10
@@ -80,7 +80,7 @@ class Student
           self.new_from_db(row)
         end.first
     end
-    
+
 
 
   def save
